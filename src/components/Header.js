@@ -34,7 +34,12 @@ const Header = (props) => {
     const chooseDate = () => {
         props.setIsCustom(true)
         const newDate = prompt('New Date(format YYYY-MM-DD.  Earliest 1995-06-15)')
-        props.setDate(newDate)
+        try {
+            if(newDate!==null) props.setDate(newDate)
+        } catch(err) {
+            console.log(JSON.stringify(err))
+        }
+       
     }
 
     return (

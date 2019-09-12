@@ -10,7 +10,6 @@ import Footer from "./components/Footer"
 function App() {
 
   const baseSiteUrl = `https://api.nasa.gov/planetary/apod?api_key=ch8qGNhqpyF8WKTZBLwjdBMYqhccrttNbPV9nxHH`
-  let tempSiteUrl = baseSiteUrl
   const [copyright, setCopyright] = useState('')
   const [date, setDate] = useState('')
   const [explanation, setExplanation] = useState('')
@@ -21,6 +20,7 @@ function App() {
 
   //test movie 2019-09-08
   useEffect(() => {
+    let tempSiteUrl = baseSiteUrl
     if(isCustom) tempSiteUrl = `${baseSiteUrl}&date=${date}`
     axios.get(tempSiteUrl)
       .then (response => {
@@ -33,8 +33,7 @@ function App() {
         setTitle(obj.title)
       })
       .catch (err => console.log(err))
-  }, [date])
-
+  }, [date, baseSiteUrl, isCustom])
 
 
   return (
@@ -46,7 +45,12 @@ function App() {
         isCustom={isCustom}
         setIsCustom={setIsCustom}
       />
-      <Main text={explanation} url={photoUrl} mediaType={mediaType}/>
+      <Main 
+        text={explanation} 
+        url={photoUrl} 
+        mediaType={mediaType}
+        title={title}
+      />
       <Footer copyright={copyright}/>
     </div>
   );
