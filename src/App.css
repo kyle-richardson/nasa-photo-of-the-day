@@ -31,3 +31,15 @@
     transform: rotate(360deg);
   }
 }
+
+/* start my code */
+
+body {
+  background-color: rgb(31, 31, 31);
+  color: rgb(199, 199, 199);
+}
+
+
+.main-image {
+  max-width: 600px;
+}
