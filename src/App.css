@@ -42,12 +42,13 @@ button:active {
   padding: 0 70px
 }
 .main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 90%;
   margin: 0 auto 20px auto;
-}
-
-.main-image {
-  margin-bottom: 20px;
+  text-align: center;
 }
 
 .footer-container {
@@ -56,7 +57,12 @@ button:active {
 }
 
 .main-image {
+  margin-bottom: 20px;
   max-width: 650px;
   border-radius: 8px;
+}
+
+.video {
+  
 }
 
