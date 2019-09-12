@@ -13,9 +13,10 @@ button {
   color: rgb(199, 199, 199);
   cursor: pointer;
   width: 100px;
-  height: 45px;
+  height: 35px;
   border-radius: 16px;
   font-size: .8rem;
+  margin: 0 30px;
 }
 
 button:hover {
@@ -38,9 +39,10 @@ button:active {
 .button-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  padding: 0 70px
+  justify-content: center;
+  align-items: center;
 }
+
 .main-container {
   display: flex;
   flex-direction: column;
