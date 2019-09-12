@@ -22,7 +22,9 @@ const Header = (props) => {
         if(longMonths.includes(rdmMonth)) totalDays=31
         else if(shortMonths.includes(rdmMonth)) totalDays=30
         else if(isLeapYear(rdmYear)) totalDays=29
-        if(rdmYear===1995&&rdmMonth===6) rdmDay= (Math.floor(Math.random()*15)+17).toString()
+        if(rdmYear===1995&&rdmMonth===6) {
+            rdmDay= (Math.floor(Math.random()*15)+17).toString()
+        }
         else rdmDay= (Math.floor(Math.random()*totalDays)+1).toString()
         let tempDate= `${rdmYear}-${rdmMonth}-${rdmDay}`
 
