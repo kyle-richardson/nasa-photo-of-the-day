@@ -1,45 +1,62 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* start my code */
-
-body {
+html {
   background-color: rgb(31, 31, 31);
   color: rgb(199, 199, 199);
 }
 
+body {
+  margin: 0 auto;
+}
+
+button {
+  border: 1px solid rgb(199, 199, 199);
+  background: rgb(83, 79, 100);
+  color: rgb(199, 199, 199);
+  cursor: pointer;
+  width: 100px;
+  height: 45px;
+  border-radius: 16px;
+  font-size: .8rem;
+}
+
+button:hover {
+  border-color: white;
+  color: white;
+}
+button:active {
+  background-color: rgb(107, 104, 122)
+}
+
+.App {
+  text-align: center;
+}
+
+.header-container {
+  border-bottom: 2px solid rgb(199, 199, 199);
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 0 70px
+}
+.main-container {
+  width: 90%;
+  margin: 0 auto 20px auto;
+}
 
 .main-image {
-  max-width: 600px;
+  margin-bottom: 20px;
 }
+
+.footer-container {
+  border-top: 2px solid rgb(199, 199, 199);
+  font-size: .8rem;
+}
+
+.main-image {
+  max-width: 650px;
+  border-radius: 8px;
+}
+
