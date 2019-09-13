@@ -32,10 +32,13 @@ function App() {
         setMediaType(obj['media_type'])
         setTitle(obj.title)
       })
-      .catch (err => console.log(err))
+      .catch (err => {
+        console.log(err)
+        alert('Invalid date. Please try again.')
+      })
   }, [date, baseSiteUrl, isCustom])
 
-
+  if(!photoUrl) return <h2>Loading...</h2>
   return (
     <div className="App">
       <Header 
