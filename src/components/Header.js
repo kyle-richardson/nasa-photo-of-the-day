@@ -1,4 +1,5 @@
 import React from "react"
+// import { Button } from "reactstrap"
 
 const Header = (props) => {
 
@@ -53,6 +54,7 @@ const Header = (props) => {
                 >
                     Random Date
                 </button>
+                {/* <Button outline color="secondary" onClick={e=>randomDate()}>Random Date</Button> */}
                 <h3 className="date">{date}</h3>
                 <button
                     className="choose-date-button"
