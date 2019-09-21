@@ -22,13 +22,13 @@ const Main = (props) => {
                 ? <ReactPlayer 
                     className="video" 
                     url={props.url} 
-                /> 
+                  /> 
                 : <img 
                     className="main-image" 
                     src={props.url} 
                     alt={props.title} 
                     onClick={toggleModal}
-                />
+                  />
             }
             <span className="under-photo-text">Click to play(video) or enlarge(photo).</span>
             <p className="explanation">{props.text}</p>

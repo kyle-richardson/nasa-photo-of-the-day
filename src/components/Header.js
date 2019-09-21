@@ -1,6 +1,7 @@
 import React from "react"
 // import { Button } from "reactstrap"
 
+
 const Header = (props) => {
 
     let date= props.date
@@ -50,16 +51,16 @@ const Header = (props) => {
                 <button
                     className="rdm-date-button"
                     name="rdm-date"
-                    onClick={e=>randomDate()}
+                    onClick={randomDate}
                 >
                     Random Date
                 </button>
-                {/* <Button outline color="secondary" onClick={e=>randomDate()}>Random Date</Button> */}
+                {/* <Button color="danger" size="lg" onClick={randomDate}>Random Date</Button> */}
                 <h3 className="date">{date}</h3>
                 <button
                     className="choose-date-button"
                     name="choose-date"
-                    onClick={e=>chooseDate()}
+                    onClick={chooseDate}
                 >
                     Choose Date
                 </button>
