@@ -23,6 +23,10 @@ function App() {
     let tempSiteUrl = baseSiteUrl
     if(isCustom) tempSiteUrl = `${baseSiteUrl}&date=${date}`
     axios.get(tempSiteUrl)
+      .then(response => {
+        setPhotoUrl('')
+        return response
+      })
       .then (response => {
         const obj = response.data
         setCopyright(obj.copyright)
@@ -36,9 +40,9 @@ function App() {
         console.log(err)
         alert('Invalid date. Please try again.')
       })
-  }, [date, baseSiteUrl, isCustom])
+  }, [date, baseSiteUrl])
 
-  if(!photoUrl) return <h2>Loading...</h2>
+  if(!photoUrl) return <h2 style={{marginTop: '30px',textAlign: 'center'}}>Loading...</h2>
   return (
     <div className="App">
       <Header 

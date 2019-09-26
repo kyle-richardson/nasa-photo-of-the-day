@@ -31,6 +31,7 @@ const Header = (props) => {
         let tempDate= `${rdmYear}-${rdmMonth}-${rdmDay}`
 
         props.setDate(tempDate)
+        
     }
 
     const chooseDate = () => {
