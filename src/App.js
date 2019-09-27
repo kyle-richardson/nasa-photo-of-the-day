@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios"
+import PulseLoader from 'react-spinners/PulseLoader';
 
 import Header from "./components/Header"
 import Main from "./components/Main"
@@ -17,6 +18,9 @@ function App() {
   const [mediaType, setMediaType] = useState('')
   const [title, setTitle] = useState('')
   const [isCustom, setIsCustom] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
+
+  
 
   //test movie 2019-09-08
   useEffect(() => {
@@ -24,6 +28,7 @@ function App() {
     if(isCustom) tempSiteUrl = `${baseSiteUrl}&date=${date}`
     axios.get(tempSiteUrl)
       .then(response => {
+        setIsLoading(true)
         setPhotoUrl('')
         return response
       })
@@ -35,6 +40,7 @@ function App() {
         !obj.hdurl ? setPhotoUrl(obj.url) : setPhotoUrl(obj.hdurl)
         setMediaType(obj['media_type'])
         setTitle(obj.title)
+        return
       })
       .catch (err => {
         console.log(err)
@@ -42,7 +48,7 @@ function App() {
       })
   }, [date, baseSiteUrl])
 
-  if(!photoUrl) return <h2 style={{marginTop: '30px',textAlign: 'center'}}>Loading...</h2>
+  if(!photoUrl) return <h2 style={{marginTop: '150px',textAlign: 'center'}}><PulseLoader color="rgb(199, 199, 199)"/></h2>
   return (
     <div className="App">
       <Header 
@@ -57,8 +63,10 @@ function App() {
         url={photoUrl} 
         mediaType={mediaType}
         title={title}
+        setIsLoading={setIsLoading}
+        isLoading={isLoading}
       />
-      <Footer copyright={copyright}/>
+      <Footer copyright={copyright} isLoading={isLoading}/>
     </div>
   );
 }

@@ -58,7 +58,7 @@ button:active {
   width: 120px;
 }
 
-.main-container {
+.main-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -95,4 +95,8 @@ button:active {
 
 .explanation {
   font-size: 1.1rem;
+}
+
+.hide {
+  display: none;
 }
