@@ -48,7 +48,11 @@ function App() {
       })
   }, [date, baseSiteUrl])
 
-  if(!photoUrl) return <h2 style={{marginTop: '150px',textAlign: 'center'}}><PulseLoader color="rgb(199, 199, 199)"/></h2>
+  if(!photoUrl) 
+    return <h2 
+      style={{marginTop: '150px',textAlign: 'center'}}>
+        <PulseLoader color="rgb(199, 199, 199)"/>
+        </h2>
   return (
     <div className="App">
       <Header 
