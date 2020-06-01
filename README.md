@@ -114,3 +114,10 @@ Do not attempt stretch problems until MVP has been reached and a final commit ha
 
 
  ## Part II - [Advanced Styling Techniques](DAY_TWO_README.md)
+
+
+TODO PART I: 
+
+- modal images (https://www.w3schools.com/howto/howto_css_modal_images.asp)
+- catch date entry errors
+- show "loading..." when pressing either button and waiting for new api get
