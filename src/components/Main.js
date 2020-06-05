@@ -1,5 +1,6 @@
 import React, {useState} from "react"
 import ReactPlayer from "react-player"
+import {Player} from "video-react"
 // import { tsPropertySignature } from "@babel/types"
 import Modal from "./Modal"
 
@@ -14,7 +15,7 @@ const Main = (props) => {
     return (
         <div className="main-container">
             <h2  
-                className = {!props.isLoading && 'hide'} 
+                className = {!props.isLoading ? 'hide': null} 
                 style={{marginTop: '150px',textAlign: 'center'}}>
                     <PulseLoader color="rgb(199, 199, 199)"/>
             </h2>
@@ -26,13 +27,14 @@ const Main = (props) => {
                     url={props.url}
                 />
                 {
-                    props.mediaType==='video' 
-                    ? <ReactPlayer 
-                        className='video'
-                        url={props.url} 
-                        onLoad={()=>props.setIsLoading(false)}
-                    /> 
-                    : <img 
+                   props.mediaType==='video' 
+                    ?   <Player
+                            // className='video'
+                            src={props.url} 
+                            // onLoad={()=>props.setIsLoading(false)}
+                        />  
+                    : 
+                    <img 
                         className='main-image'
                         src={props.url} 
                         alt={props.title} 
