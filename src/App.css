@@ -23,7 +23,7 @@ button {
   width: 100px;
   height: 35px;
   border-radius: 6px;
-  font-size: .8rem;
+  font-size: 0.8rem;
   margin: 0 30px;
 }
 
@@ -32,7 +32,7 @@ button:hover {
   color: white;
 }
 button:active {
-  background-color: rgb(107, 104, 122)
+  background-color: rgb(107, 104, 122);
 }
 
 .App {
@@ -44,14 +44,12 @@ button:active {
   margin-bottom: 20px;
 }
 
-
 .button-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-
 }
 
 .button-container h3 {
@@ -72,14 +70,42 @@ button:active {
 
 .footer-container {
   border-top: 2px solid rgb(199, 199, 199);
-  font-size: .8rem;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.footer-icons > * {
+  margin-right: 30px;
+  font-size: 1rem;
+}
+
+.footer-icons > *:visited {
+  color: inherit;
+}
+
+.linkedin-icon {
+  margin: 0;
+}
+
+.mail-icon:hover {
+  color: rgb(17, 106, 141);
+}
+.github-icon:hover {
+  color: black;
+}
+
+.linkedin-icon:hover {
+  color: rgb(26, 101, 212);
 }
 
 .main-image {
   max-width: 650px;
   border-radius: 8px;
   cursor: pointer;
-  
 }
 @media (max-width: 650px) {
   .main-image {
@@ -87,10 +113,9 @@ button:active {
   }
 }
 
-
 .under-photo-text {
   margin: 3px 0 20px 0;
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
 
 .explanation {
