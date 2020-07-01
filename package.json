@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.29",
+    "@fortawesome/free-brands-svg-icons": "^5.13.1",
+    "@fortawesome/free-solid-svg-icons": "^5.13.1",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
     "create-react-app": "^3.1.1",
@@ -12,7 +16,9 @@
     "react-scripts": "3.0.1",
     "react-spinners": "^0.6.1",
     "reactstrap": "^8.0.1",
-    "styled-components": "^4.3.2"
+    "redux": "^4.0.4",
+    "styled-components": "^4.3.2",
+    "video-react": "^0.14.1"
   },
   "scripts": {
     "start": "react-scripts start",
