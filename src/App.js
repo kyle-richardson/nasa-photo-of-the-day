@@ -30,7 +30,6 @@ function App() {
         return response;
       })
       .then((response) => {
-        console.log(response);
         const obj = response.data;
         setCopyright(obj.copyright);
         setDate(obj.date);
@@ -42,8 +41,9 @@ function App() {
       })
       .catch((err) => {
         console.trace(err);
-        // alert("Invalid date. Please try again.");
+        alert("Invalid date. Please try again.");
       });
+    // eslint-disable-next-line
   }, [date, baseSiteUrl]);
 
   if (!photoUrl)
