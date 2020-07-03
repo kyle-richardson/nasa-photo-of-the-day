@@ -2,4 +2,4 @@
 
 ### APIs used:
 
-[NASA POTD](https://api.nasa.gov/planetary/apod)
+[NASA POTD](https://api.nasa.gov/)
