@@ -1,3 +1,5 @@
 ## Kyle Richardson - NASA POTD
 
-### API used - https://api.nasa.gov/planetary/apod
+### APIs used:
+
+[NASA POTD](https://api.nasa.gov/planetary/apod)
