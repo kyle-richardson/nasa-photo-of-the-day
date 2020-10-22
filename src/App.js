@@ -2,21 +2,24 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 import PulseLoader from "react-spinners/PulseLoader";
+import moment from "moment"
 
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
 
 function App() {
-  const baseSiteUrl = `https://api.nasa.gov/planetary/apod?api_key=ch8qGNhqpyF8WKTZBLwjdBMYqhccrttNbPV9nxHH`;
+  const today = new Date()
+  const today_formatted = moment(today).format("YYYY-MM-DD")
   const [copyright, setCopyright] = useState("");
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState(today_formatted);
   const [explanation, setExplanation] = useState("");
   const [photoUrl, setPhotoUrl] = useState("");
   const [mediaType, setMediaType] = useState("");
   const [title, setTitle] = useState("");
   const [isCustom, setIsCustom] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const baseSiteUrl = `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}&date=${date}`;
 
   //test movie 2019-09-08
   useEffect(() => {
