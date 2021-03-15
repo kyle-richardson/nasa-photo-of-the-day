@@ -34,12 +34,15 @@ function App() {
       })
       .then((response) => {
         const obj = response.data;
+        console.log(obj)
         setCopyright(obj.copyright);
         setDate(obj.date);
         setExplanation(obj.explanation);
         !obj.hdurl ? setPhotoUrl(obj.url) : setPhotoUrl(obj.hdurl);
         setMediaType(obj["media_type"]);
         setTitle(obj.title);
+        setTimeout(()=> {
+          setIsLoading(false)}, 1000)
         return;
       })
       .catch((err) => {
