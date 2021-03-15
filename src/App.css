@@ -104,6 +104,7 @@ button:active {
 
 .main-image {
   max-width: 650px;
+  max-height: 650px;
   border-radius: 8px;
   cursor: pointer;
 }

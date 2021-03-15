@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import ReactPlayer from "react-player";
-// import { Player } from "video-react";
 import Modal from "./Modal";
-
 import PulseLoader from "react-spinners/PulseLoader";
 
 const Main = (props) => {
@@ -27,13 +24,18 @@ const Main = (props) => {
           url={props.url}
         />
         {props.mediaType === "video" ? (
-          // <Player
-          //         className='video'
-          //         src={props.url}
-          //         onLoad={()=>props.setIsLoading(false)}
-          //     />
-          <ReactPlayer url={props.url} />
-        ) : (
+          <>
+            <iframe allowFullScreen 
+              width="640px"
+              height="360px"
+              type="text/html" 
+              name={props.title} 
+              src={props.url}
+              onLoad={() => props.setIsLoading(false)}
+            />
+          </>
+         ) 
+         : ( 
           <img
             className="main-image"
             src={props.url}
