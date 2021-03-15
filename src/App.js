@@ -41,8 +41,8 @@ function App() {
         !obj.hdurl ? setPhotoUrl(obj.url) : setPhotoUrl(obj.hdurl);
         setMediaType(obj["media_type"]);
         setTitle(obj.title);
-        setTimeout(()=> {
-          setIsLoading(false)}, 1000)
+        // setTimeout(()=> {
+        //   setIsLoading(false)}, 1000)
         return;
       })
       .catch((err) => {
