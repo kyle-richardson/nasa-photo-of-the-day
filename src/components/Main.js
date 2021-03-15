@@ -30,6 +30,7 @@ const Main = (props) => {
               height="360px"
               type="text/html" 
               name={props.title} 
+              title={props.title}
               src={props.url}
               onLoad={() => props.setIsLoading(false)}
             />
